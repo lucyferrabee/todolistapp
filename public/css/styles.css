@@ -1,0 +1,102 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #64b5ae;
+}
+
+h2 {
+    color: #1a0578;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.section {
+    background-color: whitesmoke;
+    padding: 20px;
+    display: inline-block;
+    margin: 15px 100px;
+    border-radius: 7px;
+}
+
+ul {
+    display: inline-block;
+    margin: auto;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+li p {
+    padding-left: 10px;
+}
+
+.button {
+    background-color: #1a0578;
+    color: white;
+    border: 2px solid #1a0578;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #4d2ed6;
+    border: 2px solid #492ec4;
+}
+
+.completeBox {
+    background-color: #ffffff00;
+    border-radius: 50%;
+    border: 2px solid #ffffff00;
+    height: 25px;
+    width: 25px;
+}
+
+.incomplete {
+    background-image: url('../assets/circle.svg');
+    background-repeat: no-repeat;
+}
+
+.complete {
+    background-image: url('../assets/check.svg');
+    background-repeat: no-repeat;
+}
+
+.complete:hover {
+    background-image: url('../assets/circle.svg');
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+}
+
+.incomplete:hover {
+    background-image: url('../assets/check.svg');
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+}
+
+.deleteTask {
+    padding-left: 10px;
+}
+
+footer {
+    font-size: 0.8rem;
+    position: fixed;
+    bottom: 4px;
+    left: 70px;
+}
+
+footer div {
+    text-align: left;
+}
+
+footer a {
+    text-decoration: none;
+}

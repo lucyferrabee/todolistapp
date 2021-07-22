@@ -33,5 +33,14 @@ return function (ContainerBuilder $containerBuilder) {
         return $renderer;
     };
 
+
+    $container['db'] = function() {
+        $db = new PDO('mysql:host=127.0.0.1;dbname=todolist', 'root', 'password');
+        return $db;
+    };
+
+    $container['TasksModel'] = DI\factory(\App\Factories\TasksModelFactory::class);
+
+
     $containerBuilder->addDefinitions($container);
 };
