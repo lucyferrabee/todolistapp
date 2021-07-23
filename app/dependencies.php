@@ -42,7 +42,7 @@ return function (ContainerBuilder $containerBuilder) {
 
     $container['TasksModel'] = DI\factory(\App\Factories\TasksModelFactory::class);
     $container['DisplayAllTasksController'] = DI\factory(\App\Factories\DisplayAllTasksControllerFactory::class);
-
+    $container['NewTaskController'] = DI\factory(\App\Factories\NewTaskControllerFactory::class);
 
 
     $containerBuilder->addDefinitions($container);

@@ -8,6 +8,7 @@ return function (App $app) {
     $container = $app->getContainer();
 
     $app->get('/', 'DisplayAllTasksController');
+    $app->post('/', 'NewTaskController');
 //
 //    $app->get('/', function ($request, $response, $args) use ($container) {
 //        $model = $container->get('TasksModel');

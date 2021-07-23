@@ -13,18 +13,18 @@ class TasksModel
         $this->db = $db;
     }
 
-    public function getAllTasks()
+    public function getAllTasks(): array
     {
-        $query = $this->db->prepare('SELECT task FROM tasks');
+        $query = $this->db->prepare('SELECT `task` FROM `tasks`');
         $query->execute();
         return $query->fetchAll();
     }
 
-    public function addTask(string $task): bool
+    public function addTask($task)
     {
-        $query = $this->db->prepare('INSERT INTO `tasks` (`task`,`completed`)
-                VALUES (:task, '0')');
+        $query = $this->db->prepare('INSERT INTO `tasks` (`task`)
+                VALUES (:task)');
         $query->execute([':task' => $task]);
         return $query;
     }
-}
+};
