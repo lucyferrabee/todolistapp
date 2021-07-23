@@ -8,7 +8,7 @@
 <body>
 <section class="section">
     <div class="addTask">
-        <form  action="/addNewTask" method="post">
+        <form  action="/" method="get">
             <label for="newTask">Add New Task</label>
             <input type="text" id="newTask" name="newTask">
             <input class="button" type="submit" value="Submit">
@@ -17,8 +17,12 @@
 </section>
 <section class="section">
     <h2>My Tasks</h2>
-    <div> <?php var_dump($tasks) ?> </div>
     <ul class="tasks">
+        <?php
+        foreach ($tasks as $task) {
+            echo '<li>' . ($task["task"]) . '</li>';
+        }
+        ?>
     </ul>
 </section>
 <section class="section">

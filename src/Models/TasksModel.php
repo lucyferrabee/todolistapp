@@ -15,8 +15,16 @@ class TasksModel
 
     public function getAllTasks()
     {
-        $query = $this->db->prepare('SELECT * FROM tasks');
+        $query = $this->db->prepare('SELECT task FROM tasks');
         $query->execute();
         return $query->fetchAll();
+    }
+
+    public function addTask(string $task): bool
+    {
+        $query = $this->db->prepare('INSERT INTO `tasks` (`task`,`completed`)
+                VALUES (:task, '0')');
+        $query->execute([':task' => $task]);
+        return $query;
     }
 }

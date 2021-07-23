@@ -28,6 +28,6 @@ class DisplayAllTasksController extends Controller
 
     public function getTasks()
     {
-        
+
     }
 }

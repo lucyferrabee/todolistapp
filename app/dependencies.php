@@ -36,10 +36,13 @@ return function (ContainerBuilder $containerBuilder) {
 
     $container['db'] = function() {
         $db = new PDO('mysql:host=127.0.0.1;dbname=todolist', 'root', 'password');
+        $db->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC);
         return $db;
     };
 
     $container['TasksModel'] = DI\factory(\App\Factories\TasksModelFactory::class);
+    $container['DisplayAllTasksController'] = DI\factory(\App\Factories\DisplayAllTasksControllerFactory::class);
+
 
 
     $containerBuilder->addDefinitions($container);
