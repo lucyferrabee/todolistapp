@@ -23,7 +23,7 @@ class DisplayAllTasksController extends Controller
     public function __invoke(Request $request, Response $response, array $args)
     {
         $tasks = $this->model->getAllTasks();
-        return $this->renderer->render($response, "taskshomepage.php", ['tasks' => $tasks]);
+        return $this->renderer->render($response, "index.php", ['tasks' => $tasks]);
     }
 
     public function getTasks()
